@@ -1,0 +1,59 @@
+.register__thanks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 0.4rem;
+}
+
+.register__thanks img {
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.register__thanks h2 {
+    font-size: 1.2rem;
+    color: var(--c-secGray);
+    text-align: center;
+}
+
+.register__thanks p {
+    width: 90%;
+    font-size: 0.9rem;
+    color: var(--c-gray);
+    text-align: center;
+}
+
+.register__thanks button {
+    padding: 0.5rem 0.8rem;
+    border-radius: 24px;
+    border: 1.2px solid transparent;
+    background-color: var(--c-priBlue);
+    color: var(--c-white);
+    font-weight: 500;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    margin-top: 0.6rem;
+    transition: all 0.28s ease;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .register__thanks button:is(:hover, :focus-visible) {
+        background-color: transparent;
+        color: var(--c-priBlue);
+        border-color: var(--c-priBlue);
+    }
+}
+
+@media all and (max-width: 600px) {
+    .register__thanks {
+        padding: 0.2rem;
+    }
+}
