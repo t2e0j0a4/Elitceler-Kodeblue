@@ -104,9 +104,11 @@
     transition: all 0.28s linear;
 }
 
-.select__options p:is(:hover, :focus-visible) {
-    background-color: var(--c-midBlue);
-    color: var(--c-secGray);
+@media (hover: hover) and (pointer: fine) {
+    .select__options p:is(:hover, :focus-visible) {
+        background-color: var(--c-midBlue);
+        color: var(--c-secGray);
+    }
 }
 
 .select__options p.selected__option {
