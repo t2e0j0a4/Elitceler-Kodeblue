@@ -1,0 +1,81 @@
+.app__resetform {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0.8rem;
+}
+
+.reset__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.reset__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.reset__head h2 {
+    font-size: 1.4rem;
+    color: var(--c-secGray);
+    text-align: left;
+}
+
+.reset__head p {
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    text-align: left;
+}
+
+.reset__form > button[type=submit] {
+    width: 100%;
+    border-radius: 24px;
+    background-color: var(--c-priBlue);
+    padding: 0.5rem 0.8rem;
+    font-family: inherit;
+    font-size: 1.08rem;
+    outline: none;
+    border: 1.2px solid transparent;
+    transition: all 0.3s ease;
+    color: var(--c-white);
+    font-weight: 500;
+}
+
+@media (pointer: fine) and (hover: hover) {
+
+    .auth__terms p a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+    }
+   
+    .reset__option a:is(:hover, :focus-visible), .forgot__pass a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+        background-color: transparent;
+    }
+
+    .reset__form > button[type=submit]:is(:hover, :focus-visible) {
+        color: var(--c-priBlue);
+        background-color: transparent;
+        border-color: var(--c-priBlue);
+    }
+}
+
+@media all and (max-width: 1074px) {
+
+    .app__resetform {
+        width: 100%;
+        padding: 0.4rem;
+    }
+
+}

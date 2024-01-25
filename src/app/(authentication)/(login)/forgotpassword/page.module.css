@@ -1,0 +1,167 @@
+.app__forgotpass {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0.8rem;
+}
+
+.checkmail__req {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.checkmail__req h3 {
+    font-size: 1.28rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--c-secGray);
+}
+
+.checkmail__req p:nth-child(2) {
+    font-size: 0.98rem;
+    text-align: left;
+    color: var(--c-gray);
+}
+
+.checkmail__req p:nth-child(4) {
+    font-size: 0.88rem;
+    text-align: left;
+    color: var(--c-secGray);
+}
+
+.checkmail__req p button {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: border 0.28s ease;
+    padding: 0.12rem 0.2rem;
+    color: var(--c-priBlue);
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.forgotpass__option {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.forgotpass__option {
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    text-align: right;
+}
+
+.forgotpass__option a {
+    font-size: 1.2rem;
+    color: var(--c-priBlue);
+    font-weight: 500;
+    width: 32px;
+    background-color: #33333314;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    border: 1px solid transparent;
+    outline: none;
+    transition: all 0.28s ease;
+    border-radius: 50%;
+}
+
+.forgotpass__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.form__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.form__head h2 {
+    font-size: 1.4rem;
+    color: var(--c-secGray);
+    text-align: left;
+}
+
+.form__head p {
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    text-align: left;
+}
+
+.forgotpass__form > button[type=submit] {
+    width: 100%;
+    border-radius: 24px;
+    background-color: var(--c-priBlue);
+    padding: 0.5rem 0.8rem;
+    font-family: inherit;
+    font-size: 1.08rem;
+    outline: none;
+    border: 1.2px solid transparent;
+    transition: all 0.3s ease;
+    color: var(--c-white);
+    font-weight: 500;
+}
+
+@media (pointer: fine) and (hover: hover) {
+
+    .auth__terms p a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+    }
+   
+    .forgotpass__option a:is(:hover, :focus-visible), .forgot__pass a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+        background-color: transparent;
+    }
+
+    .forgotpass__form > button[type=submit]:is(:hover, :focus-visible) {
+        color: var(--c-priBlue);
+        background-color: transparent;
+        border-color: var(--c-priBlue);
+    }
+
+    .checkmail__req p button:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+    }
+}
+
+@media all and (max-width: 1074px) {
+
+    .app__forgotpass {
+        width: 100%;
+        padding: 0.4rem;
+    }
+
+    .checkmail__req {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .checkmail__req h3, .checkmail__req p:nth-child(3), .checkmail__req p:nth-child(4) {
+        text-align: center;
+    }
+
+}

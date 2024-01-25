@@ -1,0 +1,182 @@
+/* Defining Layout of authentication Group */
+
+.app__auth {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-lightBlue);
+}
+
+.auth__page {
+    width: 50%;
+    max-width: 700px;
+    height: 100%;
+    background-color: var(--c-lightBlue);
+    padding: 1.2rem;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.auth__terms {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth__terms p {
+    font-size: 0.84rem;
+    text-align: center;
+    color: var(--c-gray);
+}
+
+.auth__terms p a {
+    padding: 0.12rem;
+    border-radius: 3px;
+    color: var(--c-priBlue);
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+    outline: none;
+}
+
+/* Defining Layout of authentication Group */
+
+/* Login page */
+
+.app__login {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0.8rem;
+}
+
+.login__option, .forgot__pass {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login__option p {
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    text-align: right;
+}
+
+.login__option p a, .forgot__pass a {
+    font-size: 1rem;
+    color: var(--c-priBlue);
+    font-weight: 500;
+    padding: 0.1rem 0.2rem;
+    border: 1px solid transparent;
+    outline: none;
+    transition: border 0.28s ease;
+    border-radius: 4px;
+}
+
+.login__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.12rem;
+}
+
+.form__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.form__head h2 {
+    font-size: 1.4rem;
+    color: var(--c-secGray);
+    text-align: left;
+}
+
+.form__head p {
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    text-align: left;
+}
+
+.login__form > button[type=submit] {
+    width: 100%;
+    border-radius: 24px;
+    background-color: var(--c-priBlue);
+    padding: 0.5rem 0.8rem;
+    font-family: inherit;
+    font-size: 1.08rem;
+    outline: none;
+    border: 1.2px solid transparent;
+    transition: all 0.3s ease;
+    color: var(--c-white);
+    font-weight: 500;
+}
+
+@media (pointer: fine) and (hover: hover) {
+
+    .auth__terms p a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+    }
+   
+    .login__option p a:is(:hover, :focus-visible), .forgot__pass a:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+    }
+
+    .login__form > button[type=submit]:is(:hover, :focus-visible) {
+        color: var(--c-priBlue);
+        background-color: transparent;
+        border-color: var(--c-priBlue);
+    }
+}
+
+/* Login page */
+
+/* Responsive Page */
+
+@media all and (max-width: 1150px) {
+    .auth__page {
+        padding: 1.2rem 0.8rem;
+    }
+}
+
+@media all and (max-width: 1074px) {
+
+    .app__auth {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .auth__page {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .app__login {
+        width: 100%;
+        padding: 0.4rem;
+    }
+
+}
+
+
+/* Responsive Page */

@@ -1,0 +1,86 @@
+.form__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.form__input label {
+    font-size: 1rem;
+    text-align: left;
+    color: var(--c-gray);
+    font-weight: 500;
+}
+
+.form__input > input {
+    width: 100%;
+    padding: 0.6rem 0.98rem;
+    border-radius: 24px;
+    outline: none;
+    border: 1.5px solid #EEE;
+    background: var(--c-white);
+    font-family: inherit;
+    font-size: 0.98rem;
+    transition: all 0.28s ease;
+    color: var(--c-gray);
+}
+
+.password__wrap {
+    width: 100%;
+    display: flex;
+    outline: none;
+    padding: 0.6rem 0.98rem;
+    border-radius: 24px;
+    border: 1.5px solid #EEE;
+    background: var(--c-white);
+    transition: all 0.28s ease;
+}
+
+.password__wrap > input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 0.98rem;
+    color: var(--c-gray);
+    font-family: inherit;
+    transition: all 0.28s ease;
+}
+
+.password__wrap > button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    padding: 0.2rem;
+    font-size: 0.92rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: var(--c-gray);
+    transition: all 0.28s ease;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .form__input > input:focus {
+        border-color: var(--c-priBlue);
+        color: var(--c-priBlue);
+    }
+
+    .password__wrap:focus-within {
+        border-color: var(--c-priBlue);
+    }
+
+    .password__wrap:focus-within input {
+        color: var(--c-priBlue);
+    }
+
+    .password__wrap > button:is(:hover, :focus-visible) {
+        border-color: var(--c-priBlue);
+        color: var(--c-priBlue);
+    }
+}
