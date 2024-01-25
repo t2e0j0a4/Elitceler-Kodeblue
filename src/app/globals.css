@@ -37,7 +37,7 @@ button {
 
 @media all and (max-width: 600px) {
 
-  a, button {
+  * {
     cursor: default !important;
   }
 
