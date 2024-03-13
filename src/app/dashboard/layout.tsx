@@ -1,0 +1,18 @@
+import React from 'react';
+import type { Metadata } from 'next'
+import styles from "./layout.module.css";
+import Sidebar from '@/components/dashboard/Sidebar/Sidebar';
+
+export const metadata: Metadata = {
+  title: 'Dashboard | Kodeblue',
+  description: 'Welcome to',
+}
+
+const layout = ({children}: {children: React.ReactNode}) => {
+
+  return (
+    <main className={styles.dashboard__layout}><Sidebar/>{children}</main>
+  )
+}
+
+export default layout

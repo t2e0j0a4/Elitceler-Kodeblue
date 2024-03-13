@@ -14,6 +14,13 @@
   --c-priBlue: #335EE9;
   --c-midBlue: #7f95de;
   --c-lightBlue: #F6F9FF;
+
+  --c-red: #EB5757;
+  --c-green: #27AE60;
+
+  --c-darkGreen: #2B7F75;
+  --c-pinkPurple: #E3759D;
+  --c-yellowBrown: #FFB46B;
 }
 
 html {
