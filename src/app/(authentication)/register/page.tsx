@@ -125,8 +125,8 @@ const Register = () => {
             }}>
               <h2>Create Account</h2>
               <p>Signup now and start exploring our app has to offer you. We&#39;re excited to welcome you to our community.</p>
-              <FormInputs inputLabel='Hospital Name' inputUsingFor='normal' inputType='text' uniqueId='hospitalName' placeholder='Enter hospital name' inputName='hospitalName' inputTitle='Enter Hospital Name' inputValue={registrationState.hospitalName} inputValueChange={handleInputChange} />
-              <FormInputs inputLabel='Email Address' inputUsingFor='normal' inputType='email' uniqueId='hospitalEmail' placeholder='Enter email address' inputName='hospitalEmail' inputTitle='Provide a valid email address' inputValue={registrationState.hospitalEmail} inputValueChange={handleInputChange}  />
+              <FormInputs inputLabel='Hospital Name' inputUsingFor='normal' inputType='text' uniqueId='hospitalName' placeholder='Enter hospital name' inputName='hospitalName' inputTitle='Enter Hospital Name' inputValue={registrationState.hospitalName} inputValueChange={handleInputChange} fieldTitle='Enter Hospital Name' />
+              <FormInputs inputLabel='Email Address' inputUsingFor='normal' inputType='email' uniqueId='hospitalEmail' placeholder='Enter email address' inputName='hospitalEmail' inputTitle='Provide a valid email address' inputValue={registrationState.hospitalEmail} inputValueChange={handleInputChange} fieldTitle='Enter valid Email Address' />
               <FormInputs inputLabel='Create a Password' inputUsingFor='password' inputType='password' uniqueId='hospitalPassword' placeholder='Create a Password' inputName='hospitalPassword' inputTitle='Password hide/show' fieldTitle="Password should be 6-24 long containing atleat 1 Uppercase, 1 Lowercase, 1 Numeric & a special symbol." inputPattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{6,24}' inputValue={registrationState.hospitalPassword}  inputValueChange={handleInputChange} />
               <FormSelect selectLabel='Medical Specialities Offered' dispatchType="MEDICAL_SPECIALITIES_OPTIONS" dropOptions={medicalSpecialities} handleSelectOptions={handleSelectOptions} />
               <button type='submit'>Next</button>
@@ -153,7 +153,7 @@ const Register = () => {
                 <FormInputs inputLabel="Person&#39;s Contact" inputUsingFor='normal' inputType='text' uniqueId='relevantPersonContact' placeholder="Enter Person&#39;s Contact" inputName='relevantPersonContact' inputTitle='Enter Person&#39;s Contact Number (Provide a valid contact number)' inputPattern='^[0-9+\s]*$' inputValue={registrationState.relevantPersonContact} inputValueChange={handleInputChange} />
               </div>
 
-              <FormInputs inputLabel='Total beds available' inputUsingFor='normal' inputType='text' uniqueId='totalBedsAvailable' placeholder='Total beds available in hospital' inputName='totalNumberOfBeds' inputTitle='Total beds available in hospital (Only positive numeric allowed)' inputPattern='[0-9]+' inputValue={registrationState.totalNumberOfBeds} inputValueChange={handleInputChange} />
+              <FormInputs inputLabel='Total beds available' inputUsingFor='normal' inputType='text' uniqueId='totalBedsAvailable' placeholder='Total beds available in hospital' inputName='totalNumberOfBeds' fieldTitle='Total beds available in hospital (Only positive numeric allowed)' inputTitle='Total beds available in hospital (Only positive numeric allowed)' inputPattern='[0-9]+' inputValue={registrationState.totalNumberOfBeds} inputValueChange={handleInputChange} />
 
               <div className={styles.form__radio}>
                 <h3>Website for Online Appointment Booking</h3>
@@ -169,7 +169,7 @@ const Register = () => {
                 </div>
                 {
                   registrationState.onlineAppointmentBookingAvailability === 'Available' && (
-                    <FormInputs inputLabel='Website URL' inputUsingFor='normal' inputType='text' uniqueId='onlineBookingURL' placeholder='Enter Web URL of online booking application' inputName='onlineAppointmentBookingWebURL' inputTitle='Provide a valid URL' inputValue={registrationState.onlineAppointmentBookingWebURL} inputValueChange={handleInputChange} inputPattern='https://.+' />
+                    <FormInputs inputLabel='Website URL' inputUsingFor='normal' inputType='text' uniqueId='onlineBookingURL' placeholder='Enter Web URL of online booking application' inputName='onlineAppointmentBookingWebURL' fieldTitle='Provide a valid URL' inputTitle='Provide a valid URL' inputValue={registrationState.onlineAppointmentBookingWebURL} inputValueChange={handleInputChange} inputPattern='https://.+' />
                   )
                 }
               </div>

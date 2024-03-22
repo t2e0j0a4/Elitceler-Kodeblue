@@ -78,7 +78,7 @@
     width: 64px;
     border: 1.4px dashed #E0E0E0;
     top: 50%;
-    left: 128%;
+    left: 130%;
     transition: all 0.28s ease;
 }
 
@@ -289,7 +289,13 @@
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
+    .register__progress span:not(:last-child)::after {
+        width: 60px;
+    }
+}
+
+@media all and (max-width: 500px) {
 
     .register__progress {
         justify-content: space-around;
@@ -301,11 +307,18 @@
     }
 
     .register__progress span:not(:last-child)::after {
-        display: none;
+        width: 36px;
     }
 
     .app__register {
         padding: 0.2rem;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .register__progress span:not(:last-child)::after {
+        width: 24px;
+        left: 116%;
     }
 }
 
