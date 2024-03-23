@@ -1,0 +1,28 @@
+.dashboard__layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #D7DAE3;
+}
+
+.responsive__layout {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.app__outerLayer {
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem;
+    background-color: #D7DAE3;
+}
+
+@media all and (max-width: 1024px) {
+    .app__outerLayer {
+        padding: 1rem;
+    }
+}

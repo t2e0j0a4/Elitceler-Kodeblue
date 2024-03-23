@@ -1,3 +1,4 @@
+import AppState from "@/context/AppContext";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <AppState>
+          {children}
+        </AppState>
+      </body>
     </html>
   );
 }

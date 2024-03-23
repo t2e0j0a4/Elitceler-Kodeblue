@@ -1,0 +1,71 @@
+.app__respNavbar {
+    width: 100%;
+    height: 0;
+    overflow-y: hidden;
+    display: flex;
+    transition: height 0.3s ease;
+    background-color: var(--c-white);
+}
+
+.app__respNavbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.respNavbar__center {
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.respNavbar__center button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    color: var(--c-black);
+    border: 1px solid transparent;
+    background-color: #335FE90F;
+    outline: none;
+    border-radius: 4px;
+    transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.respNavbar__center img {
+    width: 72px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .respNavbar__center button:is(:hover, :focus-visible) {
+        color: var(--c-priBlue);
+        background-color: #335FE90F;
+        border: 1px solid var(--c-midBlue);
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .app__respNavbar {
+        height: 72px;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .respNavbar__center {
+        padding: 0.8rem;
+    }
+}

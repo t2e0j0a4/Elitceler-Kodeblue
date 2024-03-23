@@ -2,7 +2,9 @@ import styles from "./page.module.css";
 
 const DashboardHome = () => {
   return (
-    <div>DashboardHome</div>
+    <main className={styles.app__home}>
+      Hospital Dashboard
+    </main>
   )
 }
 
