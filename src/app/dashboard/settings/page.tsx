@@ -1,10 +1,15 @@
-import React from 'react'
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
-const Settings = () => {
+// Components
+import Topbar from "@/components/dashboard/Topbar/Topbar";
+
+const DashboardSettings = () => {
   return (
-    <div>Settings</div>
+    <div className={styles.app__settings}>
+      <Topbar mainTitle="Settings" />
+      <section className={styles.settings__center}></section>
+    </div>
   )
 }
 
-export default Settings
+export default DashboardSettings;

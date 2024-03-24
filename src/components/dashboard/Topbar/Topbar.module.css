@@ -1,0 +1,149 @@
+.app__topbar {
+    width: 100%;
+    height: 72px;
+    background-color: var(--c-lightBlue);
+    border: 1px solid #23232310;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar__center {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: auto;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+}
+
+.topbar__center h1 {
+    font-size: 1.6rem;
+    text-align: left;
+    color: var(--c-black);
+}
+
+.topbar__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.notifications {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifications button {
+    background-color: var(--c-white);
+    padding: 0.3rem;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: 1.4px solid var(--c-black);
+    outline: none;
+}
+
+.notify__modal {
+    width: 260px;
+    border-radius: 6px;
+    right: 0;
+    background-color: var(--c-priBlue);
+    position: absolute;
+    color: var(--c-white);
+    top: 38px;
+    height: 0;
+    overflow-y: hidden;
+    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notify__modal.open__modal {
+    height: 200px;
+    z-index: 998;
+    padding: 0.6rem;
+    overflow-y: auto;
+    box-shadow: 2px 2px 2px 1px #23232310;
+}
+
+.notify__modal::-webkit-scrollbar {
+    width: 8px;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 0 2px 1px #f6f9ff0f;
+}
+
+.notify__modal::-webkit-scrollbar-thumb {
+    background-color: var(--c-lightBlue);
+}
+
+.notify__modal::-webkit-scrollbar-thumb:hover {
+    background-color: #a2abbcbe;
+}
+
+.hospital__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hospital__name img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.4px solid var(--c-priBlue);
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hospital__name > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hospital__name > div p {
+    font-size: 0.96rem;
+    color: var(--c-priBlue);
+    text-align: left;
+}
+
+.hospital__name > div span {
+    font-size: 0.8rem;
+    color: var(--c-black);
+    font-weight: 500;
+    text-align: left;
+}
+
+@media all and (max-width: 600px) {
+
+    .topbar__center {
+        padding: 0.8rem;
+    }
+
+    .topbar__options {
+        gap: 0.8rem;
+    }
+
+    .notify__modal {
+        right: -64px;
+        top: 48px;
+    }
+
+    .hospital__name > div {
+        display: none;
+    }
+}

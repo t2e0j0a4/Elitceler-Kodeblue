@@ -1,10 +1,15 @@
-import React from 'react'
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
-const Paramedics = () => {
+// Components
+import Topbar from "@/components/dashboard/Topbar/Topbar";
+
+const DashboardParamedics = () => {
   return (
-    <div>Paramedics</div>
+    <div className={styles.app__paramedics}>
+      <Topbar mainTitle="Paramedics" />
+      <section className={styles.paramedics__center}></section>
+    </div>
   )
 }
 
-export default Paramedics
+export default DashboardParamedics;

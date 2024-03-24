@@ -1,10 +1,15 @@
-import React from 'react'
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
-const LiveCases = () => {
+// Components
+import Topbar from "@/components/dashboard/Topbar/Topbar";
+
+const DashboardLiveCases = () => {
   return (
-    <div>LiveCases</div>
+    <div className={styles.app__livecases}>
+      <Topbar mainTitle="Live Cases" />
+      <section className={styles.livecases__center}></section>
+    </div>
   )
 }
 
-export default LiveCases
+export default DashboardLiveCases;

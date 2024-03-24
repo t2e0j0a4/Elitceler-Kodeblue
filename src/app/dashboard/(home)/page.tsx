@@ -6,7 +6,7 @@ import Topbar from "@/components/dashboard/Topbar/Topbar";
 const DashboardHome = () => {
   return (
     <div className={styles.app__home}>
-      <Topbar/>
+      <Topbar mainTitle="Dashboard" />
       <section className={styles.home__center}></section>
     </div>
   )

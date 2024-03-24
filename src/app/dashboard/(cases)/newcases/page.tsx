@@ -1,10 +1,15 @@
-import React from 'react'
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
-const Newcases = () => {
+// Components
+import Topbar from "@/components/dashboard/Topbar/Topbar";
+
+const DashboardNewCases = () => {
   return (
-    <div>Newcases</div>
+    <div className={styles.app__newcases}>
+      <Topbar mainTitle="New Cases" />
+      <section className={styles.newcases__center}></section>
+    </div>
   )
 }
 
-export default Newcases;
+export default DashboardNewCases;
