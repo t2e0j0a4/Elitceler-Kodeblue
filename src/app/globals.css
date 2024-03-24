@@ -42,6 +42,101 @@ button {
   cursor: pointer;
 }
 
+/* Not Found & Error */
+
+.app__notFound, .app__error {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--c-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound__center, .error__center {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.6rem 0.8rem;
+}
+
+.notFound__center h1 {
+  font-size: 14vmin;
+  color: var(--c-priBlue);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.error__center h2 {
+  font-size: 2.4rem;
+  color: var(--c-red);
+  text-align: center;
+}
+
+.notFound__center p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-red);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.notFound__center img, .error__center img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  padding: 0.8rem;
+}
+
+.error__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.notFound__center a, .error__center button, .error__center a {
+  border-radius: 8px;
+  background-color: var(--c-priBlue);
+  padding: 0.5rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  border: 1.2px solid transparent;
+  transition: all 0.3s ease;
+  color: var(--c-white);
+  font-weight: 500;
+  text-align: center;
+}
+
+.error__center button {
+  background-color: var(--c-red);
+}
+
+/* Not Found & Error */
+
+@media (pointer: fine) and (hover: hover) {
+  .notFound__center a:is(:hover, :focus-visible), .error__center a:is(:hover, :focus-visible) {
+    color: var(--c-priBlue);
+    background-color: transparent;
+    border-color: var(--c-priBlue);
+  }
+
+  .error__center button:is(:hover, :focus-visible) {
+    color: var(--c-red);
+    background-color: transparent;
+    border-color: var(--c-red);
+  }
+}
+
 @media all and (max-width: 800px) {
 
   * {
