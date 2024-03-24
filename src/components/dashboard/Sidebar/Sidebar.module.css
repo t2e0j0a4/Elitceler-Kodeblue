@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: flex-start;
     background-color: var(--c-white);
-    transition: width 0.4s ease, box-shadow 0.3s ease-in;
+    transition: all 0.4s ease;
     position: relative;
     flex: 0 0 auto;
 }
@@ -42,6 +42,7 @@
 .sidebar__logo {
     width: 100%;
     height: 64px;
+    flex: 0 0 auto;
     border-bottom: 1.2px dotted var(--c-priBlue);
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,7 @@
 
 /* Sidebar Menu */
 
-.sidebar__menu {
+.sidebar__menu, .sidebar__logout {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,7 @@
     border-bottom: 1.2px dotted var(--c-priBlue);
 }
 
-.sidebar__menu > p {
+.sidebar__menu > p, .sidebar__logout > p {
     font-size: 0.8rem;
     color: #BDBDBD;
     text-align: left;
@@ -179,15 +180,6 @@
 .sub__menu > li a.active__page {
     color: var(--c-priBlue);
     background-color: #335FE90F;
-}
-
-.sidebar__logout {
-    width: 100%;
-    padding: 0.4rem 1.2rem 1.2rem;
-    margin-top: 2.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sidebar__logout > button {

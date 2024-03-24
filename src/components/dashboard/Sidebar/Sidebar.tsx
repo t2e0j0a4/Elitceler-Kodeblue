@@ -51,21 +51,24 @@ const Sidebar = () => {
 
           <ul className={styles.main__menu}>
 
-            <li onClick={() => {setToggleSubMenu({cases: false, staff: false})}} className={styles.menu__item}><Link href="/dashboard" className={pathName === '/dashboard' ? styles.active__page : ''}><MdOutlineDashboard fontSize={21}/><span>Dashboard</span></Link></li>
+            <li onClick={() => {
+              setToggleSubMenu({cases: false, staff: false});
+              setToggleSidebar(false);
+            }} className={styles.menu__item}><Link href="/dashboard" className={pathName === '/dashboard' ? styles.active__page : ''}><MdOutlineDashboard fontSize={21}/><span>Dashboard</span></Link></li>
 
             <li className={styles.menu__item}>
               <button type="button" className={pathName.includes('cases') ? styles.active__page : ''} onClick={() => {setToggleSubMenu({cases: !toggleSubMenu.cases, staff: false})}}><TbActivityHeartbeat fontSize={21}/><span>Cases</span></button>
               <ol className={`${styles.sub__menu} ${toggleSubMenu.cases && styles.active__submenu}`}>
-                <li><Link className={pathName === '/dashboard/livecases' ? styles.active__page : ''} tabIndex={toggleSubMenu.cases ? 0 : -1} href="/dashboard/livecases"><span>Live Cases</span></Link></li>
-                <li><Link className={pathName === '/dashboard/newcases' ? styles.active__page : ''} tabIndex={toggleSubMenu.cases ? 0 : -1} href="/dashboard/newcases"><span>New Cases</span></Link></li>
+                <li><Link onClick={() => {setToggleSidebar(false)}} className={pathName === '/dashboard/livecases' ? styles.active__page : ''} tabIndex={toggleSubMenu.cases ? 0 : -1} href="/dashboard/livecases"><span>Live Cases</span></Link></li>
+                <li><Link onClick={() => {setToggleSidebar(false)}} className={pathName === '/dashboard/newcases' ? styles.active__page : ''} tabIndex={toggleSubMenu.cases ? 0 : -1} href="/dashboard/newcases"><span>New Cases</span></Link></li>
               </ol>
             </li>
 
             <li className={styles.menu__item}>
               <button type="button" className={(pathName.includes('doctors') || pathName.includes('paramedics')) ? styles.active__page : ''} onClick={() => {setToggleSubMenu({cases: false, staff: !toggleSubMenu.staff})}}><RiUserAddLine fontSize={21}/><span>Staff</span></button>
               <ol className={`${styles.sub__menu} ${toggleSubMenu.staff && styles.active__submenu}`}>
-                <li><Link className={pathName === '/dashboard/doctors' ? styles.active__page : ''} tabIndex={toggleSubMenu.staff ? 0 : -1} href="/dashboard/doctors"><span>Doctors</span></Link></li>
-                <li><Link className={pathName === '/dashboard/paramedics' ? styles.active__page : ''} tabIndex={toggleSubMenu.staff ? 0 : -1} href="/dashboard/paramedics"><span>Paramedics</span></Link></li>
+                <li><Link onClick={() => {setToggleSidebar(false)}} className={pathName === '/dashboard/doctors' ? styles.active__page : ''} tabIndex={toggleSubMenu.staff ? 0 : -1} href="/dashboard/doctors"><span>Doctors</span></Link></li>
+                <li><Link onClick={() => {setToggleSidebar(false)}} className={pathName === '/dashboard/paramedics' ? styles.active__page : ''} tabIndex={toggleSubMenu.staff ? 0 : -1} href="/dashboard/paramedics"><span>Paramedics</span></Link></li>
               </ol>
             </li>
 
@@ -83,9 +86,15 @@ const Sidebar = () => {
 
           <ul className={styles.main__menu}>
 
-            <li onClick={() => {setToggleSubMenu({cases: false, staff: false})}} className={styles.menu__item}><Link href="/dashboard/helpcenter"><IoHelpSharp fontSize={21}/><span>Help & Center</span></Link></li>
+            <li onClick={() => {
+              setToggleSubMenu({cases: false, staff: false})
+              setToggleSidebar(false);
+            }} className={styles.menu__item}><Link href="/dashboard/helpcenter"><IoHelpSharp fontSize={21}/><span>Help & Center</span></Link></li>
 
-            <li onClick={() => {setToggleSubMenu({cases: false, staff: false})}} className={styles.menu__item}><Link href="/dashboard/settings"><IoSettingsOutline fontSize={21}/><span>Settings</span></Link></li>
+            <li onClick={() => {
+              setToggleSubMenu({cases: false, staff: false})
+              setToggleSidebar(false);
+            }} className={styles.menu__item}><Link href="/dashboard/settings"><IoSettingsOutline fontSize={21}/><span>Settings</span></Link></li>
 
           </ul>
 
@@ -93,10 +102,15 @@ const Sidebar = () => {
 
         {/* Menu Stand - 2 */}
 
-      </div>
+        {/* Menu Stand - 3 */}
 
-      <div className={styles.sidebar__logout}>
-        <button type="button"><MdLogout fontSize={21}/><span>Logout</span></button>
+        <div className={styles.sidebar__logout}>
+          <p>OTHERS</p>
+          <button type="button"><MdLogout fontSize={21}/><span>Logout</span></button>
+        </div>
+
+        {/* Menu Stand - 3 */}
+
       </div>
 
     </aside>

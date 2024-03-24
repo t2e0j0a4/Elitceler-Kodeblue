@@ -17,7 +17,7 @@ const RespNavbar = () => {
     return (
         <nav className={styles.app__respNavbar}>
             <div className={styles.respNavbar__center}>
-                <button type="button" onClick={() => {setToggleSidebar(!toggleSidebar)}} title='Main Menu'><RiMenuUnfoldLine fontSize={18}/></button>
+                <button type="button" onClick={() => {setToggleSidebar(!toggleSidebar)}} title='Main Menu'><RiMenuUnfoldLine fontSize={24}/></button>
                 <Image src={"/assets/Kodeblue.svg"} alt='Kodeblue' width={72} height={72} priority={false} />
             </div>
         </nav>
