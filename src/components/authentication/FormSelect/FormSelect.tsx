@@ -20,8 +20,7 @@ type FormSelectTypes = {
 const FormSelect = ({ selectLabel, dispatchType, dropOptions, handleSelectOptions }: FormSelectTypes) => {
   const [showOptions, setShowOptions] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  const selectRef = useRef<HTMLDivElement | null>(null);
-
+  
   const handleOptionSelect = (option: string) => {
     setSelectedOptions((prevOptions) => {
       if (prevOptions.includes(option)) {
@@ -32,6 +31,8 @@ const FormSelect = ({ selectLabel, dispatchType, dropOptions, handleSelectOption
     });
   };
 
+  const selectRef = useRef<HTMLDivElement | null>(null);
+
   const handleClickOutside = (event: MouseEvent) => {
     if (
       selectRef.current &&
@@ -41,19 +42,19 @@ const FormSelect = ({ selectLabel, dispatchType, dropOptions, handleSelectOption
     }
   };
 
-  useMemo(() => {
-
-    handleSelectOptions(dispatchType, selectedOptions);
-
-    // eslint-disable-next-line
-  }, [selectedOptions]);
-
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useMemo(() => {
+
+    handleSelectOptions(dispatchType, selectedOptions);
+
+    // eslint-disable-next-line
+  }, [selectedOptions]);
 
   return (
     <div className={styles.form__select} ref={selectRef}>

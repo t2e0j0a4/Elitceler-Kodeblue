@@ -49,6 +49,7 @@
     height: 32px;
     border: 1.4px solid var(--c-black);
     outline: none;
+    transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .notify__modal {
@@ -126,6 +127,14 @@
     color: var(--c-black);
     font-weight: 500;
     text-align: left;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .notifications button:is(:hover, :focus-visible) {
+        color: var(--c-white);
+        background-color: var(--c-priBlue);
+        border-color: var(--c-priBlue);
+    }
 }
 
 @media all and (max-width: 600px) {
