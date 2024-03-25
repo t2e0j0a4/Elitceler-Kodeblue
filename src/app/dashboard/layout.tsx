@@ -6,7 +6,7 @@ import RespNavbar from '@/components/dashboard/RespNavbar/RespNavbar';
 
 export const metadata: Metadata = {
   title: 'Dashboard | Kodeblue',
-  description: 'Welcome to',
+  description: 'Welcome to Admin Dashboard of Kodeblue Hospital Management',
 }
 
 const layout = ({children}: {children: React.ReactNode}) => {

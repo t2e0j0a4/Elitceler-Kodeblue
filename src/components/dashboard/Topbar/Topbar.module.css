@@ -42,7 +42,7 @@
 }
 
 .notifications button {
-    background-color: var(--c-white);
+    background-color: transparent;
     padding: 0.3rem;
     border-radius: 50%;
     width: 32px;
@@ -102,7 +102,8 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 1.4px solid var(--c-priBlue);
+    border: 1.4px solid var(--c-midBlue);
+    background-color: var(--c-midBlue);
     padding: 0.3rem;
     display: flex;
     justify-content: center;
@@ -118,7 +119,7 @@
 
 .hospital__name > div p {
     font-size: 0.96rem;
-    color: var(--c-priBlue);
+    color: var(--c-black);
     text-align: left;
 }
 

@@ -1,0 +1,116 @@
+.beds__card {
+    max-width: 100%;
+    height: 180px;
+    background-color: var(--c-white);
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 1px #23232310;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.card__head {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card__head span {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.card__head p {
+    font-size: 0.92rem;
+    color: var(--c-black);
+    text-align: left;
+    font-weight: 500;
+}
+
+.card__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.beds__show {
+    width: 100%;
+    padding: 0.48rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 8px;
+}
+
+.beds__show:nth-child(1) {
+    background-color: #F0F9EB;
+}
+
+.beds__show:nth-child(2) {
+    background-color: #F9EEEB;
+}
+
+.beds__show p {
+    font-size: 0.9rem;
+    color: var(--c-black);
+    text-align: left;
+}
+
+.beds__count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.beds__count button {
+    width: 20px;
+    height: 20px;
+    border: 1.4px solid var(--c-priBlue);
+    color: var(--c-priBlue);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 0.2rem;
+    border-radius: 7px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.beds__count h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: normal;
+    color: var(--c-black);
+}
+
+.beds__count button:disabled {
+    border-color: var(--c-midBlue);
+    color: var(--c-midBlue);
+    cursor: not-allowed;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .beds__count button:not(:disabled):is(:hover, :focus-visible) {
+        color: var(--c-white);
+        background-color: var(--c-priBlue);
+    }
+}

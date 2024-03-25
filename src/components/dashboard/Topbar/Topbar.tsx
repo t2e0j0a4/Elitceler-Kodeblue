@@ -13,7 +13,6 @@ const Topbar = ({mainTitle} : {mainTitle: string}) => {
     const selectRef = useRef<HTMLDivElement | null>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
-        console.log(event.target);
         if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
             setShowNotificatonModal(false);
         }
